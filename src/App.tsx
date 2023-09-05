@@ -1,8 +1,9 @@
 /* eslint-disable prettier/prettier */
 
 import { SafeAreaView} from 'react-native';
-import Login from './modules/login';
-
+import Routes from './routes/index';
+import Login from './modules/login/screens/Login/Login';
+import Home from './modules/login/screens/Home/Home';
 
 
 
@@ -10,9 +11,7 @@ const App = () => {
 
 
   return (
-    <SafeAreaView>
-      <Login />
-    </SafeAreaView>
+      <Routes/>    
   );
 };
 
