@@ -23,7 +23,7 @@ const Login = () => {
     return (
         <View>
             <ContainerPlugin>
-                <Image source={require("../../../../assets/pikachu.png")} style={style.logo}/>
+                <Image source={require("../../../../assets/shop.jpg")} style={style.logo}/>
                 <Input placeholder='E-mail' onChangeText={setEmail}/>
                 <Input placeholder="Senha" onChangeText={setSenha}/>
                 <Butomn onpress={singin}/>
@@ -47,7 +47,7 @@ const style = StyleSheet.create({
     logo:{
         width:200,
         height: 210,
-        marginLeft: 50,
+        marginLeft: 10,
         marginBottom: 50,
         marginTop:-150
 

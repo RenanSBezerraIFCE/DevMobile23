@@ -4,7 +4,7 @@ import {styled} from 'styled-components/native';
 export const ContainerPlugin = styled.View`
   height: 100%;
   width: 100%;
-  background-color: #c3c3c3;
+  background-color: white;
   justify-content: center;
   align-items: center;
   padding: 16px;
