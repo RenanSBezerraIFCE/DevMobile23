@@ -12,7 +12,6 @@ import {useNavigation} from '@react-navigation/native'
 const Login = () => {
 
     const singin=()=>{
-        alert("Email: "+email)
         navigation.navigate("Home")
     }
     const navigation = useNavigation();
