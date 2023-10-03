@@ -28,7 +28,8 @@ export const style = StyleSheet.create({
     },
     Price: {
         fontSize: 24,
-        width: 200,       
+        width: 200,
+        color: '#B8860B'       
     },
     ImageProduct: {
         width: 395,
@@ -62,22 +63,24 @@ export const style = StyleSheet.create({
     IconAdd: {
         height: 30,
         width: 30,
-        margin: 5
-    },
-    IconStar: {
-        height: 30,
-        width: 30,
-        margin: 5
-    },
-    IconStarClicked: {
-        height: 30,
-        width: 30,
-        margin: 10
+        margin: 15,
     },
     optProduct: {
         flex: 1,
         flexDirection: 'row',
-        marginTop: 30,
-        marginLeft: '80%'
+        marginTop: 5,
+        marginLeft: '20%',
+    },
+    AddCart:{
+        fontSize: 20,
+        fontWeight: 'bold',
+        color: "#191970",
+        marginBottom: 20,
+        marginTop:5
+    },
+    Product:{
+        borderBottomColor:'#191970',
+        borderBottomWidth:4,
+        marginBottom:10
     }
 })

@@ -11,9 +11,6 @@ import {useNavigation} from '@react-navigation/native'
 
 const Login = () => {
 
-    const singin=()=>{
-        navigation.navigate("Home")
-    }
     const navigation = useNavigation();
 
     const[email,setEmail] = useState('');
@@ -23,9 +20,9 @@ const Login = () => {
         <View>
             <ContainerPlugin>
                 <Image source={require("../../../../assets/shop.jpg")} style={style.logo}/>
-                <Input placeholder='E-mail' onChangeText={setEmail}/>
-                <Input placeholder="Senha" onChangeText={setSenha}/>
-                <Butomn onpress={singin}/>
+                <Input placeholder='E-mail ou Login' textAlign='center' onChangeText={setEmail}/>
+                <Input placeholder="Senha" textAlign='center' onChangeText={setSenha}/>
+                <Butomn onpress={() => navigation.navigate("Home",email)}/>
             </ContainerPlugin>
         </View>
     );

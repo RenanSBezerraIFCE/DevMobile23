@@ -9,11 +9,13 @@ import { style } from '../../styles/cart.style'
 const Cart = (props) => {
 
     useEffect(() => {
-        if (products['p1'].inCart == true) { setProducts({ ...products, p1: { ...products.p1, ['qtde']: 1 } }) }
-        if (products['p2'].inCart == true) { setProducts({ ...products, p2: { ...products.p2, ['qtde']: 1 } }) }
-        if (products['p3'].inCart == true) { setProducts({ ...products, p3: { ...products.p3, ['qtde']: 1 } }) }
-        if (products['p4'].inCart == true) { setProducts({ ...products, p4: { ...products.p4, ['qtde']: 1 } }) }
+        products['p1'].inCart ? setProducts({ ...products, p1: { ...products.p1, ['qtde']: 1 } }): null &&
+        products['p2'].inCart ? setProducts({ ...products, p2: { ...products.p2, ['qtde']: 1 } }): null &&
+        products['p3'].inCart ? setProducts({ ...products, p3: { ...products.p3, ['qtde']: 1 } }): null &&
+        products['p4'].inCart ? setProducts({ ...products, p4: { ...products.p4, ['qtde']: 1 } }): null;
     }, []);
+
+    
 
     const [products, setProducts] = useState(props.route.params)
 
@@ -116,7 +118,7 @@ const Cart = (props) => {
                     </TouchableOpacity>
                 </View> : null}
 
-                <View style={style.Total}><Text style={style.TotalProce}>Total a Pagar   {(
+                <View style={style.Total}><Text style={style.TotalProce}>Total a Pagar:     R$ {(
                     (products.p1.qtde * products.p1.price)+
                     (products.p2.qtde * products.p2.price)+
                     (products.p3.qtde * products.p3.price)+
